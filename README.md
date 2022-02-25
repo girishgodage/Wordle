@@ -1,14 +1,15 @@
 # Wordle-Game
+
 A Game of Wordle with the benefit of 2x API from RapidAPI
 
+[Live](http://girishgodage.in/Wordle/)
 
 # Getting Started
 
-To start this project please go to RapidAPI to sign up for the [APIs](https://bit.ly/rapidapi-hub). 
-
-
+To start this project please go to RapidAPI to sign up for the [APIs](https://bit.ly/rapidapi-hub).
 
 ### `.env`
+
 Now create a `.env` file in the root of your project with the following:
 
 ```
@@ -23,7 +24,7 @@ This will install all the necessary dependencies.
 
 ### `npm run start:backend`
 
-This will start the backend on  [http://localhost:8000](http://localhost:8000).
+This will start the backend on [http://localhost:8000](http://localhost:8000).
 
 ### `copy the path to your index.html file`
 
