@@ -3,12 +3,14 @@ const keyboard = document.querySelector(".key-container");
 const messageDisplay = document.querySelector(".message-container");
 
 let wordle;
+const serverURL = "https://gir-wordle.netlify.app//.netlify/functions/api/";
 
 const getWordle = () => {
-  fetch("http://localhost:8000/word")
+  fetch(serverURL + "word")
     .then((response) => response.json())
     .then((json) => {
       wordle = json.toUpperCase();
+      console.log(wordle);
     })
     .catch((err) => console.log(err));
 };
@@ -122,7 +124,7 @@ const deleteLetter = () => {
 const checkRow = () => {
   const guess = guessRows[currentRow].join("");
   if (currentTile > 4) {
-    fetch(`http://localhost:8000/check/?word=${guess}`)
+    fetch(serverURL + `check/?word=${guess}`)
       .then((response) => response.json())
       .then((json) => {
         if (!json) {
